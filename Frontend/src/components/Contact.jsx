@@ -20,7 +20,7 @@ const Contact = () => {
     
 
     try {
-      const response = await axios.post('https://portfolio-database-vodd.onrender.com/api/contact', formData);
+      const response = await axios.post('http://localhost:5000/api/contact', formData);
       setStatus(response.data.message);
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
